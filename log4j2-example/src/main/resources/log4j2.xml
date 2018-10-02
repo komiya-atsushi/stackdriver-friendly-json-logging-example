@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn"
+               packages="me.k11i.log4j2">
+    <Appenders>
+        <Console name="console">
+            <StackdriverFriendlyJsonLayout />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>

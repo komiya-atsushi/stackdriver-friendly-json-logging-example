@@ -1,0 +1,28 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.1.RELEASE'
+        springCloudGcpVersion = '1.0.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+version '1.0'
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-gcp-dependencies:${springCloudGcpVersion}"
+    }
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-gcp-starter-logging'
+}

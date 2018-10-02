@@ -1,0 +1,5 @@
+rootProject.name = 'stackdriver-friendly-json-logging-example'
+include 'log4j2-example'
+include 'logback-example'
+include 'spring-cloud-example'
+
